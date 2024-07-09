@@ -17,7 +17,8 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/coffepage" element={<CoffePage />} />
         <Route path="/aboutpage" element={<AboutPage />} />
-        <Route path="/gestioncafe" element={<GestionCoffeesPage />} />
+        <Route path="/gestioncafe" element={<ProtectedRoute roles={['ADMIN']}><GestionCoffeesPage /></ProtectedRoute>} />
+        <Route path="/clientes" element={<ProtectedRoute roles={['ADMIN']}>Clientes</ProtectedRoute>} />
       </Routes>
     </div>
   );
