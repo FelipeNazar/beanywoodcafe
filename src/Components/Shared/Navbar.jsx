@@ -20,6 +20,7 @@ function Navbar() {
             <a href="/" className="py-2 px-4 mx-2 font-medium text-white rounded hover:bg-[#e6a532] hover:text-white transition duration-300">Inicio</a>
             <a href="/CoffePage" className="py-2 px-4 mx-2 font-medium text-white rounded hover:bg-[#e6a532] hover:text-white transition duration-300">Coffees</a>
             <a href="/AboutPage" className="py-2 px-4 mx-2 font-medium text-white rounded hover:bg-[#e6a532] hover:text-white transition duration-300">Acerca de</a>
+            
             {user ? (
               <>
                 {user.rol.includes('ADMIN') && (

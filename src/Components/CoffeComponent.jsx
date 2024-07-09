@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaSearch } from 'react-icons/fa';
+import { AuthContext } from '../Context/AuthContext';
+import { FaPlus } from 'react-icons/fa';
 
-function CoffeeCard({ titulo, descripcion, precio, imagen }) {
+
+function CoffeeCard({ titulo, descripcion, precio, imagen, isLoggedIn }) {
   return (
-    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md m-4">
+    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md m-4 relative">
       <img className="rounded-t-lg w-full h-48 object-contain" src={imagen} alt={titulo} />
       <div className="p-5 flex flex-col items-center">
         <h5 className="mb-2 text-2xl font-bold text-gray-900 text-center">{titulo}</h5>
@@ -13,11 +16,19 @@ function CoffeeCard({ titulo, descripcion, precio, imagen }) {
           Opiniones
         </button>
       </div>
+      {isLoggedIn && (
+        <button className="absolute top-4 right-4 text-orange-500 bg-white p-2 rounded-full border border-gray-200 shadow-md">
+          <FaPlus />
+        </button>
+      )}
     </div>
   );
 }
 
 function CoffeeComponent() {
+  const { user } = useContext(AuthContext);
+  const isLoggedIn = !!user;
+
   return (
     <div className="container mx-auto mt-12">
       <div className="relative w-1/2 mb-8 ml-10">
@@ -33,25 +44,29 @@ function CoffeeComponent() {
           titulo="Original Classic" 
           descripcion="Café intenso, cálido y con un sabor excepcional." 
           precio="$7.000" 
-          imagen="/cafe1.webp" 
+          imagen="/cafe1.webp"
+          isLoggedIn={isLoggedIn} 
         />
         <CoffeeCard 
           titulo="Working Beany" 
           descripcion="Café muy intenso, mezcla de ricos arábicas y robustas." 
           precio="$5.000" 
-          imagen="/cafe2.webp"  
+          imagen="/cafe2.webp"
+          isLoggedIn={isLoggedIn}  
         />
         <CoffeeCard 
           titulo="Colombia" 
           descripcion="Café suave con notas afrutadas y apreciada acidez." 
           precio="$5.000" 
-          imagen="/cafe3.webp"  
+          imagen="/cafe3.webp"
+          isLoggedIn={isLoggedIn}  
         />
         <CoffeeCard 
           titulo="Cloudy Beany" 
           descripcion="Café con aromas frutales y un cuerpo redondo." 
           precio="$5.000" 
-          imagen="/cafe4.webp" 
+          imagen="/cafe4.webp"
+          isLoggedIn={isLoggedIn} 
         />
       </div>
     </div>
