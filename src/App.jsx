@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<Inicio />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/coffepage" element={<ProtectedRoute roles={['ADMIN']}><CoffePage /></ProtectedRoute>} />
+        <Route path="/coffepage" element={<CoffePage />} />
         <Route path="/aboutpage" element={<AboutPage />} />
         <Route path="/gestioncafe" element={<GestionCoffeesPage />} />
       </Routes>
