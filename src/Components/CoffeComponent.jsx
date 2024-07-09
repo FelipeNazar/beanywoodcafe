@@ -31,25 +31,25 @@ function CoffeeComponent() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         <CoffeeCard 
           titulo="Original Classic" 
-          descripcion="Café intenso, cálido y con un sabor excepcional. • Pack de 20 cápsulas de aluminio compatibles con cafeteras Nespresso. • El tamaño de la caja es de 15x7x6cm" 
+          descripcion="Café intenso, cálido y con un sabor excepcional." 
           precio="$7.000" 
           imagen="/cafe1.webp" 
         />
         <CoffeeCard 
           titulo="Working Beany" 
-          descripcion="Café muy intenso, mezcla de ricos arábicas y robustas. • Pack de 20 cápsulas de aluminio compatibles con cafeteras Nespresso. • El tamaño de la caja es de 15x7x6cm" 
+          descripcion="Café muy intenso, mezcla de ricos arábicas y robustas." 
           precio="$5.000" 
           imagen="/cafe2.webp"  
         />
         <CoffeeCard 
           titulo="Colombia" 
-          descripcion="Café suave con notas afrutadas y apreciada acidez. • Pack de 20 cápsulas de aluminio compatibles con cafeteras Nespresso. • El tamaño de la caja es de 15x7x6cm" 
+          descripcion="Café suave con notas afrutadas y apreciada acidez." 
           precio="$5.000" 
           imagen="/cafe3.webp"  
         />
         <CoffeeCard 
           titulo="Cloudy Beany" 
-          descripcion="Café con aromas frutales y un cuerpo redondo. • Pack de 20 cápsulas de aluminio compatibles con cafeteras Nespresso. • El tamaño de la caja es de 15x7x6cm" 
+          descripcion="Café con aromas frutales y un cuerpo redondo." 
           precio="$5.000" 
           imagen="/cafe4.webp" 
         />
