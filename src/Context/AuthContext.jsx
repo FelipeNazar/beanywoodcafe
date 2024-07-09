@@ -16,7 +16,7 @@ export default function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
 
   const navigate = useNavigate();
-  const API_URL = import.meta.env.VITE_URL_ACCESS;
+  const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -58,7 +58,7 @@ export default function AuthProvider({ children }) {
         if (payloadObject.rol === 'CUSTOMER') {
           navigate('/');
         } else {
-          navigate('/admin/AdminCoffes');
+          navigate('/');
         }
       })
       .catch((error) => {
