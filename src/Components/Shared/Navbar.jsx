@@ -26,7 +26,7 @@ function Navbar() {
                 {user.rol.includes('ADMIN') && (
                   <>
                     <a href="/gestioncafe" className="py-2 px-4 mx-2 font-medium text-white rounded hover:bg-[#e6a532] hover:text-white transition duration-300">Gestion Coffees</a>
-                    <a href="/clientes" className="py-2 px-4 mx-2 font-medium text-white rounded hover:bg-[#e6a532] hover:text-white transition duration-300">Clientes</a>
+                    <a href="/gestioncafeclientes" className="py-2 px-4 mx-2 font-medium text-white rounded hover:bg-[#e6a532] hover:text-white transition duration-300">Clientes</a>
                   </>
                 )}
                 <button onClick={logout} className="py-2 px-4 mx-2 font-medium text-white rounded hover:bg-[#e6a532] hover:text-white transition duration-300">Salir</button>

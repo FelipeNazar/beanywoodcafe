@@ -7,7 +7,7 @@ function GestionCoffeCliente() {
     <div className="flex flex-col min-h-screen bg-white">
       <Navbar />
       <main className="flex-grow p-8">
-        <h1 className="text-2xl font-bold mb-6">Nuevo Coffee</h1>
+        <h1 className="text-2xl font-bold mb-6">Clientes </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="overflow-x-auto">
             <table className="min-w-full border">

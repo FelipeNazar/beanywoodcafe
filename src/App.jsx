@@ -7,6 +7,7 @@ import CoffePage from './Pages/CoffePage';
 import AboutPage from './Pages/AboutPage';
 import GestionCoffeesPage from './Pages/GestionCoffe';
 import ProtectedRoute from './Context/ProtectedRoute';
+import GestionCoffeCliente from './Pages/GestionCoffeCliente';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Route path="/coffepage" element={<CoffePage />} />
         <Route path="/aboutpage" element={<AboutPage />} />
         <Route path="/gestioncafe" element={<ProtectedRoute roles={['ADMIN']}><GestionCoffeesPage /></ProtectedRoute>} />
-        <Route path="/clientes" element={<ProtectedRoute roles={['ADMIN']}>Clientes</ProtectedRoute>} />
+        <Route path="/gestioncafeclientes" element={<ProtectedRoute roles={['ADMIN']}><GestionCoffeCliente/></ProtectedRoute>} />
       </Routes>
     </div>
   );
